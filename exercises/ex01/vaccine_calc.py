@@ -18,32 +18,28 @@ from datetime import timedelta
 
 
 # Begin your solution here...
-population = input("Population: ")
-doses_administered = input("Doses administered: ")
-doses_per_day = input("Doses per day: ")
-target_percent = input("Target percent vaccinated: ")
+population: int = int(input("Population: "))
+doses_administered: int = int(input("Doses administered: "))
+doses_per_day: int = int(input("Doses per day: "))
+target_pr: int = int(input("Target percent vaccinated: "))
 
-population = int(population)
-doses_administered = int(doses_administered)
-doses_per_day = int(doses_per_day)
-target_percent = int(target_percent)/100
+target_pr = target_pr / 100
 
-target_population = population * target_percent
-pop_without_vaccine = population - (doses_administered/2)
-days_until_target = ((pop_without_vaccine - target_population)*2)/doses_per_day
+target_population = population * target_pr
+pop_with_vaccine: float = doses_administered / 2
+days: float = ((target_population - pop_with_vaccine) * 2) / doses_per_day
+print(days)
 
 today: datetime = datetime.today()
-number_of_days: timedelta = timedelta(days_until_target)
+number_of_days: timedelta = timedelta(days)
 target_date: datetime = today + number_of_days
 target_date = target_date.strftime("%B %d, %Y")
 
-target_percent = target_percent * 100
-target_percent = round(target_percent)
-days_until_target = round(days_until_target)
-target_percent = str(target_percent)
-days_until_target = str(days_until_target)
+target_pr = target_pr * 100
+target_pr = round(target_pr)
+days = round(days)
+target_pr = str(target_pr)
+days = str(days)
 target_date = str(target_date)
 
-print("We will reach " + target_percent + "% vaccination in " + days_until_target + " days, which falls on " + target_date  + ".")
-
-
+print("We will reach " + target_pr + "% vaccination in " + days + " days, which falls on " + target_date + ".")

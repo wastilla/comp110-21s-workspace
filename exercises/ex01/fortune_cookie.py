@@ -1,6 +1,6 @@
 """Program that outputs one of at least four random, good fortunes."""
 
-__author__ = 730387741
+__author__ = "730387741"
 
 # The randint function is imported from the random library so that
 # you are able to generate integers at random.
@@ -11,7 +11,7 @@ __author__ = 730387741
 # It will evaluate to an int value >= 1 and <= 100. 
 from random import randint
 
-fortune = (randint(1, 3))
+fortune = (randint(1, 4))
 print("Your fortune cookie says...")
 
 if fortune == 1:
@@ -22,6 +22,10 @@ else:
     else:
         if fortune == 3:
             print("Soon life will become more interesting.")
+        else: 
+            if fortune == 4:
+                print("You're gonna have a great day today.")
+            
 
 print("Now, go spread positive vibes!")
 
