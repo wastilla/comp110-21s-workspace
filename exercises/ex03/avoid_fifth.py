@@ -7,7 +7,7 @@ def main() -> None:
     """Entrypoint of the program."""
     # Put print statements here to test your function
     # ex. print(avoid_fifth("hello there"))
-    print(avoid_fifth("steezy"))
+    print(avoid_fifth("Will turn that bass down!"))
 
 def avoid_fifth(y: str) -> str:
     i: int = 0
