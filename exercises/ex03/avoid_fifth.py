@@ -10,6 +10,7 @@ def main() -> None:
     print(avoid_fifth("Will turn that bass down!"))
 
 def avoid_fifth(y: str) -> str:
+"""This function delets all e's from a string"""
     i: int = 0
     newString: str = ""
     temp: chr
