@@ -5,7 +5,7 @@ __author__: str = "730387741"
 
 def main() -> None:
     """Entrypoint of the program."""
-    print(is_prime(1))
+    print(is_prime(10))
     print(list_primes(10, 20))
 
 def is_prime(x: int) -> bool:
@@ -14,15 +14,15 @@ def is_prime(x: int) -> bool:
     x: int
     while i < 9:
         if x == 1:
-            return True
+            return False
         if x % i == 0:
             if i != x:
-                return True
+                return False
             else:
                 i+=1
         else:
             i+=1
-    return False
+    return True
 
 def list_primes(x: int, y: int) -> list:
     """This function lists all prime number between two given integers."""

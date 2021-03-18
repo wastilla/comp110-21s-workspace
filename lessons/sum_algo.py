@@ -14,6 +14,6 @@ def sum_algo(xs: list[int]) -> int:
     #   2. False) Result is stored in total varible
     return total
 
-odds: list[int] = [1, 3, 5, 7]
+odds: list[int] = []
 odds_sum: int = sum_algo(odds)
 print(odds_sum)

@@ -6,36 +6,40 @@ __author__: str = "730387741"
 def main() -> None:
     """Entrypoint of the program."""
     print(is_prime(1))
-    print(list_primes(10, 20))
+    print(list_primes(1, 100))
+
 
 def is_prime(x: int) -> bool:
     """This function determines if a number is prime."""
     i: int = 2
-    x: int
     while i < 9:
         if x == 1:
-            return True
+            return False
+        if x == 0:
+            return False
         if x % i == 0:
             if i != x:
-                return True
+                return False
             else:
-                i+=1
+                i += 1
         else:
-            i+=1
-    return False
+            i += 1
+    return True
 
-def list_primes(x: int, y: int) -> list:
+
+def list_primes(x: int, y: int) -> list[int]:
     """This function lists all prime number between two given integers."""
-    primes: list = []
+    primes: list[int] = []
     cur: int = x
     while cur < y:
         if is_prime(cur):
+            primes.append(cur)
             cur += 1
         else:
-
-            primes.append(cur)
-            cur+=1
+            
+            cur += 1
     return primes
+
 
 if __name__ == "__main__":
     main()
